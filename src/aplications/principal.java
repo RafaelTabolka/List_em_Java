@@ -12,14 +12,14 @@ public class principal {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("CADASTRO DE FUNCION�RIO");
+		System.out.println("CADASTRO DE FUNCIONÁRIO");
 		System.out.println();
 
-		System.out.println("Digite a quantidade de funcion�rios: ");
+		System.out.println("Digite a quantidade de funcionários: ");
 		int n = sc.nextInt();
 
 		while (n <= 0) {
-			System.out.println("Quantidade inv�lida. Digite alguma valor maior que 0: ");
+			System.out.println("Quantidade inválida. Digite alguma valor maior que 0: ");
 			n = sc.nextInt();
 			System.out.println();
 		}
@@ -31,7 +31,7 @@ public class principal {
 		do {
 			for (int i = 0; i < n; i++) {
 				System.out.println();
-				System.out.println("Funcion�rio #" + (i + 1));
+				System.out.println("Funcionário #" + (i + 1));
 
 				System.out.println("Id: ");
 				Integer id = sc.nextInt();
@@ -46,7 +46,7 @@ public class principal {
 				System.out.println("Nome: ");
 				String nome = sc.nextLine();
 
-				System.out.println("Sal�rio: ");
+				System.out.println("Salário: ");
 				Float salario = sc.nextFloat();
 
 				entities dados = new entities(id, nome, salario);
@@ -58,7 +58,7 @@ public class principal {
 			System.out.println();
 
 			for (int i = 0; i < n; i++) {
-				System.out.println("Funcion�rio #" + (i + 1) + " " + principal.get(i).toString());
+				System.out.println("Funcionário #" + (i + 1) + " " + principal.get(i).toString());
 			}
 			System.out.println();
 
@@ -66,7 +66,7 @@ public class principal {
 			alteracao = sc.next().charAt(0);
 
 			while (alteracao != 's' && alteracao != 'n') {
-				System.out.println("Opera��o inv�lida. Escolha uma op��o: ");
+				System.out.println("Operação inválida. Escolha uma opção: ");
 				alteracao = sc.next().charAt(0);
 			}
 
@@ -80,7 +80,7 @@ public class principal {
 
 		char id2;
 		do {
-			System.out.print("Digite o Id do funcion�rio que haver� altera��o no sal�rio: ");
+			System.out.print("Digite o Id do funcionário que haverá alteração no salário: ");
 			int id = sc.nextInt();
 			System.out.println();
 
@@ -91,24 +91,24 @@ public class principal {
 				System.out.println();
 				System.out.println("               DADOS ATUAIS ");
 				for (int i = 0; i < n; i++) {
-					System.out.println("Funcion�rio #" + (i + 1) + " " + principal.get(i).toString());
+					System.out.println("Funcionário #" + (i + 1) + " " + principal.get(i).toString());
 				}
 			}
 
 			else {
-				System.out.println("Digite a pocentagem de acr�scimo ao sal�rio: ");
+				System.out.println("Digite a pocentagem de acréscimo ao salário: ");
 				System.out.println();
 				float porcentagem = sc.nextFloat();
 				filtroId.aumentoSalario(porcentagem);
 
 				System.out.println("               DADOS ATUAIS ");
 				for (int i = 0; i < n; i++) {
-					System.out.println("Funcion�rio #" + (i + 1) + " " + principal.get(i).toString());
+					System.out.println("Funcionário #" + (i + 1) + " " + principal.get(i).toString());
 				}
 			}
 
 			System.out.println();
-			System.out.println("Deseja alterar o sal�rio de outro funcion�rio? 's' (sim)  'n' (n�o) ");
+			System.out.println("Deseja alterar o salário de outro funcionário? 's' (sim)  'n' (não) ");
 			id2 = sc.next().charAt(0);
 
 			while (id2 != 's' && id2 != 'n') {

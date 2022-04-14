@@ -22,7 +22,7 @@ public class entities {
 
 	public String toString() {
 		return "Id: " + id + ", Nome: " + nome
-				+ ", Sal·rio: " + String.format("%.2f", salario); 
+				+ ", Sal√°rio: " + String.format("%.2f", salario); 
 	}
 	
 	public void aumentoSalario (float porcentagem) {
