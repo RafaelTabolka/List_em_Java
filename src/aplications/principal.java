@@ -19,7 +19,7 @@ public class principal {
 		int n = sc.nextInt();
 
 		while (n <= 0) {
-			System.out.println("Quantidade inválida. Digite alguma valor maior que 0: ");
+			System.out.println("Quantidade inválida. Digite algum valor maior que 0: ");
 			n = sc.nextInt();
 			System.out.println();
 		}
